@@ -24,6 +24,7 @@ module.exports = {
     },
     fontFamily: {
       signature: ['Great Vibes'],
+      fira: ['Fira Code']
     }
   },
   plugins: [],

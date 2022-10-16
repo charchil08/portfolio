@@ -198,3 +198,24 @@
     border-radius: 66% 34% 33% 67% / 65% 73% 27% 35%;
   }
 }
+
+/* animation - 3 */
+.process {
+  animation-name: process-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 4s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  animation-timing-function: linear;
+  display: inline-block;
+  background-color: #00ff00;
+  height: 5px;
+  padding: 2px;
+}
+
+@keyframes process-animation {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 260px;
+  }
+}

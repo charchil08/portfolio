@@ -3,6 +3,7 @@ import heroImage from "../assets/heroImage.png"
 // import heroImage from "../assets/blue-gradient-designify.png"
 import { AiOutlineDoubleRight } from "react-icons/ai"
 import { Link } from 'react-scroll'
+import { MdNavigateNext } from "react-icons/md"
 import "../App.css"
 
 const Home = () => {
@@ -15,14 +16,23 @@ const Home = () => {
             >
                 <div className='flex flex-col max-w-screen-lg mx-auto justify-center items-start h-full px-4 ml-4' >
                     <h2 className=' animate-character text-white text-4xl sm:text-6xl font-bold pt-4' >
-                        I'm a Full Stack Developer
+                        Full Stack Developer
                     </h2>
-                    <p className='text-gray-500 py-4 max-w-md'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quam vitae itaque quasi, iste eaque saepe inventore atque nemo porro explicabo officia adipisci in! Temporibus placeat ex animi iusto libero omnis, esse at consectetur quam quo.
+                    <p className='text-gray-500 pt-4 max-w-md text-2xl font-fira'>
+                        Idea to Implementation
+                    </p>
+                    {/* for an process bar */}
+                    <p className='text-white process'></p>
+                    <p className='font-fira trxt-xl text-yellow-50 my-4'>
+                        <ul className='pl-6'>
+                            <li>SSIP & "आज़ादी का अमृत महोत्सव" Hackathon winner</li>
+                            <li>DSA explorer </li>
+                            <li>concrete learner</li>
+                        </ul>
                     </p>
 
                     <div>
-                        <Link className='group text-white w-fit px-6 py-2 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer' smooth duration={400} to='portfolio' >
+                        <Link className='group text-white w-fit px-6 py-2 my-4 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer' smooth duration={400} to='portfolio' >
                             Portfolio
                             <span className='group-hover:rotate-90 duration-200 ml-2' >
                                 <AiOutlineDoubleRight size={20} />
