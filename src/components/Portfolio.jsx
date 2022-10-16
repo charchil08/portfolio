@@ -1,37 +1,54 @@
-import React from 'react'
-import arrayDestruct from "../assets/portfolio/arrayDestruct.jpg"
-import installNode from "../assets/portfolio/installNode.jpg"
-import navbar from "../assets/portfolio/navbar.jpg"
-import reactParallax from "../assets/portfolio/reactParallax.jpg"
-import reactSmooth from "../assets/portfolio/reactSmooth.jpg"
-import reactWeather from "../assets/portfolio/reactWeather.jpg"
+import React, { useEffect, useState } from 'react'
+
+import cms from "../assets/portfolio/cms.png"
+import dg from "../assets/portfolio/dg.png"
+import det from "../assets/portfolio/det.png"
+import fso from "../assets/portfolio/fso.png"
 
 const Portfolio = () => {
+
+    const [demoText, setDemoText] = useState(false)
+    const [selectedRow, setSelectedRow] = useState(undefined)
+
+    const onSelectedRow = (index) => {
+        setSelectedRow(index);
+        setDemoText(true);
+    };
+
+    useEffect(() => {
+        setTimeout(() => {
+            setDemoText(false)
+        }, 1000)
+    }, [demoText])
 
     const portfolios = [
         {
             id: 1,
-            src: arrayDestruct
+            src: cms,
+            href: 'https://github.com/charchil08/Collector-vms',
+            demotAlt: 'Available soon',
+            demo: ''
         },
         {
             id: 2,
-            src: reactParallax
+            src: dg,
+            href: 'https://github.com/charchil08/Digital-gramentwear',
+            demotAlt: 'Available soon',
+            demo: ''
         },
         {
             id: 3,
-            src: navbar
+            src: det,
+            href: 'https://github.com/charchil08/Daily-Expense-tracker',
+            demotAlt: '',
+            demo: 'https://charchil08.github.io/Daily-Expense-tracker/',
         },
         {
             id: 4,
-            src: reactSmooth
-        },
-        {
-            id: 5,
-            src: installNode
-        },
-        {
-            id: 6,
-            src: reactWeather
+            src: fso,
+            href: 'https://github.com/charchil08/File-System-Organizer',
+            demotAlt: 'CLI Tool - for use, fork my git repo',
+            demo: ''
         },
     ]
 
@@ -48,21 +65,42 @@ const Portfolio = () => {
 
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
                     {
-                        portfolios.map(({ id, src }) => (
+                        portfolios.map(({ id, src, href, demotAlt, demo }, index) => (
                             <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
                                 <img src={src} alt="" className='rounded-md hover:scale-105 duration-200' />
                                 <div className="flex justify-center items-center">
-                                    <button className='w-1/2 px-6 m-3 duration-200 hover:scale-105 py-1' >Demo</button>
-                                    <button className='w-1/2 px-6 m-3 duration-200 hover:scale-105 py-1' >Code</button>
+                                    {
+                                        demo !== '' ? (
+                                            <a
+                                                href={demo}
+                                                target='_blank'
+                                                className='w-1/2 px-6 m-3 duration-200 hover:scale-105 py-1 cursor-pointer' >Demo</a>
+                                        ) : (
+                                            <a
+                                                onClick={() => onSelectedRow(index)}
+                                                className='w-1/2 px-6 m-3 duration-200 hover:scale-105 py-1 cursor-pointer' >Demo</a>
+                                        )
+                                    }
+                                    <a
+                                        href={href}
+                                        target='_blank'
+                                        className='w-1/2 px-6 m-3 duration-200 hover:scale-105 py-1 cursor-pointer'>Code</a>
                                 </div>
+                                {
+                                    demoText === true && selectedRow === index ? (
+                                        <p
+                                            className='text-red-600 px-2'
+                                            style={{
+                                                visibility: demoText ? 'visible' : 'hidden',
+                                            }}>{demotAlt}</p>
+                                    ) : null
+                                }
                             </div>
                         ))
                     }
                 </div>
-
-
             </div>
-        </div>
+        </div >
     )
 }
 
