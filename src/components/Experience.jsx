@@ -90,7 +90,7 @@ const Experience = () => {
 
                 <div className='pb-8'>
                     <p className='text-4xl font-bold inline border-b-4 border-gray-500 pb-1  hover:border-gray-200 duration-700' >Experience</p>
-                    <p className='text-xl py-6' >These are the the tech stack I've worked with</p>
+                    <p className='text-xl py-6' >These are the the tech stacks I've worked with ⚙️</p>
                 </div>
 
                 <div className='w-full grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-8 text-center py-8 px-12 sm:px-0'>

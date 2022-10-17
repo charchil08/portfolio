@@ -59,7 +59,7 @@ const Portfolio = () => {
 
                 <div className="pb-8">
                     <p className='text-4xl font-bold inline border-b-4 border-gray-500  hover:border-gray-200 duration-700' >Portfolio</p>
-                    <p className='text-xl py-6' >Check out some of my work here</p>
+                    <p className='text-xl py-6' >Check out some of my work  </p>
                 </div>
 
 

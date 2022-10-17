@@ -9,13 +9,33 @@ const About = () => {
                     <p className='text-4xl font-bold inline border-b-4 border-b-gray-500 cursor-pointer hover:border-gray-200 duration-700' >About</p>
                 </div>
                 <p className='text-xl mt-4'>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde minus distinctio fugiat quo? Pariatur neque ut minima dolorem. Consequatur tempora tempore iste possimus fugiat esse doloribus porro delectus libero tenetur. Accusamus quia fuga eligentzdi unde fugiat libero aperiam, deleniti, itaque explicabo nam, architecto voluptatibus excepturi quam aliquam distinctio ab eaque.
+                    Hey Folks👋! I am
+                    <span className="container">
+                        <span className='name'> Charchil Kajaliya</span>
+                        <span class="stars">
+                            <span className="s"></span>
+                            <span className="s"></span>
+                            <span className="s"></span>
+                            <span className="s"></span>
+                            <span className="s"></span>
+                            <span className="m"></span>
+                            <span className="m"></span>
+                            <span className="m"></span>
+                            <span className="m"></span>
+                            <span className="m"></span>
+                            <span className="l"></span>
+                            <span className="l"></span>
+                            <span className="l"></span>
+                            <span className="l"></span>
+                            <span className="l"></span>
+                        </span>
+                    </span>. A 20 years old software engineer powered by VS Code & coffe, also a weeb who loves to travel.
                 </p>
 
                 <br />
 
                 <p className='text-xl'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos provident hic ratione repudiandae ullam dolore tempora recusandae quas necessitatibus, at veniam repellat tempore, fugiat architecto aspernatur similique eligendi laudantium vitae aut illo temporibus minima ducimus ab. Dolorem corporis quas facere?
+                    I am new to community so I prefer to keep learning, continue challenging myself, and do interesting things. I am passionate about building web apps that imporwise the lives of people around me.
                 </p>
             </div >
         </div >

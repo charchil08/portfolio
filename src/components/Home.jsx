@@ -25,9 +25,10 @@ const Home = () => {
                     <p className='text-white process'></p>
                     <p className='font-fira trxt-xl text-yellow-50 my-4'>
                         <ul className='pl-6'>
-                            <li>SSIP & "आज़ादी का अमृत महोत्सव" Hackathon winner</li>
-                            <li>DSA explorer </li>
-                            <li>concrete learner</li>
+                            <li> <span>👉</span> Self-taught, independent Developer </li>
+                            <li> <span>👉</span> BE(IT) - 9.02 </li>
+                            <li> <span>👉</span> SSIP &  <abbr title="Aazadi Ka Amrut Mahotsav">"आज़ादी का अमृत महोत्सव"</abbr>  Hackathon winner</li>
+                            <li> <span>👉</span> Gujarat, India  </li>
                         </ul>
                     </p>
 

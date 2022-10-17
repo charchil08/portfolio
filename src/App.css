@@ -203,12 +203,14 @@
 .process {
   animation-name: process-animation; /* Refers to the name of your @keyframes element below */
   animation-duration: 4s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
+  animation-iteration-count: 1; /* Never stop waving :) */
   animation-timing-function: linear;
   display: inline-block;
   background-color: #00ff00;
   height: 5px;
   padding: 2px;
+  /* animation-delay: 1s; */
+  animation-fill-mode: forwards;
 }
 
 @keyframes process-animation {
@@ -216,6 +218,176 @@
     width: 0px;
   }
   to {
-    width: 260px;
+    width: 320px;
   }
+}
+
+/* animation - 4 (for name in about section) */
+.container {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.container .under {
+  padding: 20px 0;
+  margin: 0;
+  font-size: 6em;
+  text-align: center;
+  line-height: 0.95em;
+  font-weight: bold;
+  color: #22d1ee;
+  background-clip: text;
+  -webkit-background-clip: text;
+  /* 	-webkit-box-reflect: below -0.60em -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, .5)), to(transparent)); */
+}
+
+.container .name {
+  color: #22d1ee;
+}
+.stars {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.stars span {
+  position: relative;
+}
+
+.stars span::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+
+  /*star adjustment*/
+  transform: scale(0.2);
+}
+
+.stars span.s::before {
+  /*20px 20px*/
+  box-shadow: 20px 20px #ffffff;
+}
+
+.stars span.m::before {
+  box-shadow: 
+    /*1st row*/ 20px 10px #fff176, /*2段目*/ 10px 20px #fff176,
+    20px 20px #ffffff, 30px 20px #fff176, /*3段目*/ 20px 30px #fff176;
+}
+
+.stars span.l::before {
+  box-shadow: 
+    /*0th row*/ 20px 0px #fdd835, /*1段目*/ 20px 10px #fff176,
+    /*2nd row*/ 0px 20px #fdd835, 10px 20px #fff176, 20px 20px #ffffff,
+    30px 20px #fff176, 40px 20px #fdd835, /*3段目*/ 20px 30px #fff176,
+    /*4th row*/ 20px 40px #fdd835;
+}
+
+/*
+Star position and animation designation
+The first second is the animation time, the second is the time to start
+*/
+.stars span:nth-child(1) {
+  left: 10%;
+  top: 10%;
+  animation: star-anim 8s 0s infinite;
+}
+.stars span:nth-child(2) {
+  left: 80%;
+  top: 20%;
+  animation: star-anim 6s 1s infinite;
+}
+.stars span:nth-child(3) {
+  left: 60%;
+  top: 40%;
+  animation: star-anim 5s 2s infinite;
+}
+.stars span:nth-child(4) {
+  left: 20%;
+  top: 70%;
+  animation: star-anim 7s 3s infinite;
+}
+.stars span:nth-child(5) {
+  left: 80%;
+  top: 80%;
+  animation: star-anim 7s 4s infinite;
+}
+
+.stars span:nth-child(6) {
+  left: 40%;
+  top: 10%;
+  animation: star-anim 4s 0s infinite;
+}
+.stars span:nth-child(7) {
+  left: 10%;
+  top: 50%;
+  animation: star-anim 7s 1s infinite;
+}
+.stars span:nth-child(8) {
+  left: 50%;
+  top: 50%;
+  animation: star-anim 8s 2s infinite;
+}
+.stars span:nth-child(9) {
+  left: 90%;
+  top: -10%;
+  animation: star-anim 7s 3s infinite;
+}
+.stars span:nth-child(12) {
+  left: 10%;
+  top: 80%;
+  animation: star-anim 6s 1s infinite;
+}
+.stars span:nth-child(13) {
+  left: 30%;
+  top: 20%;
+  animation: star-anim 7s 2s infinite;
+}
+.stars span:nth-child(14) {
+  left: 60%;
+  top: 90%;
+  animation: star-anim 8s 3s infinite;
+}
+.stars span:nth-child(15) {
+  left: 80%;
+  top: 50%;
+  animation: star-anim 7s 4s infinite;
+}
+.stars span:nth-child(15) {
+  left: -2%;
+  top: -5%;
+  animation: star-anim 7s 4s infinite;
+}
+
+@keyframes star-anim {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+abbr[title] {
+  border-bottom: none !important;
+  cursor: inherit !important;
+  text-decoration: none !important;
 }
