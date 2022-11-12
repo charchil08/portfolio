@@ -39,7 +39,6 @@ const NavBar = () => {
         <div className='flex justify-between items-center w-full h-20 text-white bg-black fixed px-4' >
             <div className="">
                 <h1 className=""> <span className='font-signature text-5xl ml-2 text-blue-400 cursor-pointer' style={{
-
                 }} >Charchil</span> <span className="ml-1 wave">👋🏻</span> </h1>
             </div>
 

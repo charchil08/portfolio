@@ -34,7 +34,7 @@ const Home = () => {
 
                     <div>
                         <Link className='group text-white w-fit px-6 py-2 my-4 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer' smooth duration={400} to='portfolio' >
-                            Portfolio
+                            Hire me
                             <span className='group-hover:rotate-90 duration-200 ml-2' >
                                 <AiOutlineDoubleRight size={20} />
                             </span>
